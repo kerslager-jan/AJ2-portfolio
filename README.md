@@ -1,3 +1,3 @@
-# PORTFOLIO pro předmět OA2M
+# Potrfolio pro předmět OA2M
 ## Jan Keršláger
 xdddddddddd

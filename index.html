@@ -4,30 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio Jan Keršláger</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <h1 class="logo">MyPortfolio</h1>
+            <h1 class="logo">My Portfolio</h1>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h2>Hello, I'm Jan</h2>
-            <p>A passionate developer</p>
+        <div class="hero-content fade-in">
+            <h2>Hello, I'm Honza</h2>
+            <p>I like making stuff and playing games</p>
             <a href="#projects" class="btn">View My Work</a>
         </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section fade-in">
         <h2>About Me</h2>
         <p>
             I am a developer who enjoys building clean and efficient solutions.
@@ -36,30 +36,68 @@
     </section>
 
     <section id="projects" class="section">
-        <h2>Projects</h2>
+        <h2>My Hobbies</h2>
         <div class="projects-grid">
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>Short description of your project.</p>
-            </div>
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>Short description of your project.</p>
-            </div>
-            <div class="project-card">
-                <h3>Project Three</h3>
-                <p>Short description of your project.</p>
-            </div>
+            <a href="#modelmaking" class="project-card">
+                <h3>Modelmaking</h3>
+                <p>Click to learn more</p>
+            </a>
+            <a href="#games" class="project-card">
+                <h3>Computer Games</h3>
+                <p>Click to learn more</p>
+            </a>
+            <a href="#music" class="project-card">
+                <h3>Music</h3>
+                <p>Click to learn more</p>
+            </a>
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="modelmaking" class="section fade-in">
+        <h2>Modelmaking</h2>
+        <p>
+            I've been making plastic models since 2012. I started with WW2 airplanes,
+            then moved to ships and miniatures. Recently I focus on painting and WoW replicas.
+        </p>
+    </section>
+
+    <section id="games" class="section fade-in">
+        <h2>Computer Games</h2>
+        <p>
+            I enjoy playing games, especially ones where I can improve skills or explore worlds.
+            World of Warcraft has been a big part of my gaming experience.
+        </p>
+    </section>
+
+    <section id="music" class="section fade-in">
+        <h2>Music</h2>
+        <p>
+            I discovered music during Covid and got into techno and trance.
+            Since then, music has become an important part of my daily life.
+        </p>
+    </section>
+
+    <section id="contact" class="section fade-in">
         <h2>Contact</h2>
-        <p>Email: your@email.com</p>
+        <p>Email: jan.kerslager@tul.cz</p>
     </section>
 
     <footer>
-        <p>© 2026 MyPortfolio</p>
+        <p>© 2026 Jan Keršláger</p>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
