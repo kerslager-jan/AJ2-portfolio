@@ -219,6 +219,10 @@ body {
     backdrop-filter: blur(10px);
 }
 
+.section.contact{
+    min-height: 30vh;
+}
+
 .section h2 {
     font-size: 2.3rem;
     margin-bottom: 1.5rem;
