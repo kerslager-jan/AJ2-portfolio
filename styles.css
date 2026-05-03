@@ -8,20 +8,54 @@
     font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
+    color: #2d2230;
     scroll-behavior: smooth;
+
+    background:
+    linear-gradient(135deg,
+    #fff4ec 0%,
+    #ffe3ef 35%,
+    #f7d9ff 70%,
+    #f0e4ff 100%);
+
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 1rem 2rem;
-    background: #333;
-    color: white;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: rgba(20,20,30,0.72);
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    background: linear-gradient(90deg,#ff9966,#ff4fa0,#b56bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-links {
@@ -33,37 +67,166 @@ body {
 .nav-links a {
     color: white;
     text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #ffd2ef;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 0%;
+    height: 2px;
+
+    background: linear-gradient(90deg,#ff9966,#ff4fa0);
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.music-list {
+    list-style: none;
+    margin-top: 1.5rem;
+    padding-left: 0;
+}
+
+.music-list li {
+    margin: 0.9rem 0;
+}
+
+.music-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+
+    color: #ff9966;
+    position: relative;
+
+    transition: color 0.25s ease;
+}
+
+/* Hover text color */
+.music-link:hover {
+    color: #ff4fa0;
+}
+
+/* Animated underline */
+.music-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 0%;
+    height: 2px;
+
+    background: linear-gradient(90deg,#ff9966,#ff4fa0);
+    transition: width 0.3s ease;
+}
+
+.music-link:hover::after {
+    width: 100%;
 }
 
 .hero {
-    height: 90vh;
+    height: 92vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
 
-    background-image: url("media/epskirk.png"), linear-gradient(to right, #667eea, #764ba2);
+    background-image:
+    linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.35)),
+    url("media/brana_jested.png"),
+    linear-gradient(to right,#ff9966,#ff5e9c,#b56bff);
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-content h2 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 4px 12px rgba(0,0,0,0.45),
+        0 0 30px rgba(255,255,255,0.15);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+
+    text-shadow:
+        0 3px 10px rgba(0,0,0,0.45);
 }
 
 .btn {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.7rem 1.5rem;
-    background: white;
-    color: #333;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+
+    border-radius: 999px;
+    font-weight: bold;
     text-decoration: none;
-    border-radius: 5px;
+    color: white;
+
+    background: linear-gradient(90deg,#ff9966,#ff4fa0);
+
+    box-shadow: 0 10px 24px rgba(255,94,156,0.35);
+    transition: 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
 }
 
 .section {
+    scroll-margin-top: 110px;
     padding: 4rem 2rem;
-    max-width: 1000px;
-    margin: auto;
+    max-width: 1100px;
+    margin: 4rem auto;
     min-height: 70vh;
+
+    border-radius: 28px;
+    border: 4px solid #ff9966;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(253, 227, 208, 0.92),
+        rgba(252, 200, 217, 0.88),
+        rgba(237, 195, 253, 0.86)
+    );
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.7);
+
+    backdrop-filter: blur(10px);
+}
+
+.section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+
+    background: linear-gradient(90deg,#ff8a5b,#ff4fa0,#b56bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .projects-grid {
@@ -73,19 +236,75 @@ body {
 }
 
 .project-card {
-    display: block;
-    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    min-height: 340px;
     padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 18px;
+
+    color: white;
     text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s, box-shadow 0.2s;
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.05)
+    );
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+}
+
+.project-card h3,
+.project-card p {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.8);
+}
+
+.card-elementary{
+    background-image: url("media/card_zs.png");
+}
+
+.card-highschool{
+    background-image: url("media/card_lg.png");
+}
+
+.card-university{
+    background-image: url("media/card_tul.png");
+}
+
+.card-modelmaking {
+    background-image: url("media/card_models.png");
+}
+
+.card-games {
+    background-image: url("media/card_games.png");
+}
+
+.card-music {
+    background-image: url("media/card_music.png");
 }
 
 /* ANIMATIONS */
@@ -106,4 +325,80 @@ footer {
     background: #333;
     color: white;
     margin-top: 2rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.skill-pill {
+    padding: 0.75rem 1.2rem;
+    border-radius: 999px;
+
+    font-weight: 700;
+    font-size: 0.95rem;
+
+    color: white;
+
+    background: linear-gradient(90deg,#ff9966,#ff4fa0,#b56bff);
+
+    box-shadow:
+        0 8px 18px rgba(255,79,160,0.18);
+
+    transition: all 0.25s ease;
+
+    cursor: default;
+}
+
+.skill-pill:hover {
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 14px 28px rgba(181,107,255,0.25);
+}
+
+.split-layout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.split-layout.reverse {
+    flex-direction: row-reverse;
+}
+
+.split-text {
+    flex: 1;
+    min-width: 320px;
+}
+
+.split-image {
+    flex: 1;
+    min-width: 280px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.split-image img {
+    width: 100%;
+    max-width: 420px;   /* controls size */
+    max-height: 520px;  /* prevents giant tall images */
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.16);
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
 }

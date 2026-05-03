@@ -10,10 +10,11 @@
 <body>
     <header>
         <nav class="navbar">
-            <h1 class="logo">My Portfolio</h1>
+            <h1 class="logo">Jan Keršláger</h1>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Achievements</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -23,71 +24,213 @@
         <div class="hero-content fade-in">
             <h2>Hello, I'm Honza</h2>
             <p>I like making stuff and playing games</p>
-            <a href="#projects" class="btn">View My Work</a>
+            <a href="#about" class="btn">Learn more</a>
         </div>
     </section>
 
     <section id="about" class="section fade-in">
-        <h2>About Me</h2>
-        <p>
-            I am a developer who enjoys building clean and efficient solutions.
-            I work with web technologies and enjoy learning new things.
-        </p>
+        <div class="split-layout">
+            <div class="split-text">
+                <h2>About Me</h2>
+                <p>
+                    I am currently a student at TUL. I enjoy math, programming and playing video games.
+                </p>
+                
+                <h2>Technical Skills</h2>
+                <h3>Programming</h3>
+                <div class="skills-grid">
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">C++</span>
+                    <span class="skill-pill">C</span>
+                    <span class="skill-pill">Java</span>
+                    <span class="skill-pill">Assembly</span>
+                    <span class="skill-pill">Pascal</span>
+                </div>
+                <div class="skills-grid">
+                    <span class="skill-pill">NoSQL</span>
+                    <span class="skill-pill">SQL</span>
+                </div>
+                <div class="skills-grid">
+                    <span class="skill-pill">LaTeX</span>
+                    <span class="skill-pill">Git</span>
+                    <span class="skill-pill">Linux</span>
+                    <span class="skill-pill">HTML/CSS</span>
+                </div>
+            </div>
+            <div class="split-image">
+                <img src="media/ja.jpg" alt="">
+            </div>
+        </div>
+        <!--TODO: fotka sebe-->
     </section>
 
-    <section id="projects" class="section">
+    <section id="education" class="section">
+        <h2>My education</h2>
+        <div class="projects-grid">
+            <a href="#elementary" class="project-card card-elementary">
+                <h3>2. ZŠ Husova Jičín</h3>
+                <p></p>
+            </a>
+            <a href="#highschool" class="project-card card-highschool">
+                <h3>Lepařovo Gymnázium</h3>
+                <p></p>
+            </a>
+            <a href="#university" class="project-card card-university">
+                <h3>Technical University of Liberec</h3>
+                <p></p>
+            </a>
+        </div>
+    </section>
+
+    <section id="hobbies" class="section">
         <h2>My Hobbies</h2>
         <div class="projects-grid">
-            <a href="#modelmaking" class="project-card">
+            <a href="#modelmaking" class="project-card card-modelmaking">
                 <h3>Modelmaking</h3>
                 <p>Click to learn more</p>
             </a>
-            <a href="#games" class="project-card">
+            <a href="#games" class="project-card card-games">
                 <h3>Computer Games</h3>
                 <p>Click to learn more</p>
             </a>
-            <a href="#music" class="project-card">
+            <a href="#music" class="project-card card-music">
                 <h3>Music</h3>
                 <p>Click to learn more</p>
             </a>
         </div>
     </section>
 
+    <section id="elementary" class="section fade-in">
+        <div class="split-layout reverse">
+            <div class="split-text">
+                <h2>Elementary School</h2>
+                <p>
+                    When I was six, I started going to my elementary school - ZŠ Husova 170 Jičín.
+                    I attended elementary school for seven years. 
+                    After my seventh year, I decided to attempt getting into a six year high school programe.
+                    I learned a lot of life skills there, and never completed my basic education.
+                </p>
+            </div>
+            <div class="split-image">
+                <img src="media/WCL_ds_mage.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="highschool" class="section fade-in">
+        <div class="split-layout">
+            <div class="split-text">
+                <h2>High School</h2>
+                <p>
+                    I went to Lepařovo Gymnázium for my high school. I attended LG for six years.
+                    During my time there, I attended numerous english olympiads at a regional level. I also started with 
+                    programming at that age. 
+                    I graduated at the top of my class from Math, Physics and Programming.
+                </p>
+            </div>
+            <div class="split-image">
+                <img src="media/WCL_ds_mage.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="university" class="section fade-in">
+        <div class="split-layout reverse">
+            <div class="split-text">
+                <h2>University</h2>
+                <p>
+                    My first year after high school was spent in Prague. I attended two semesters 
+                    at FIT ČVUT. After that I decided living in the big city is not for me and I 
+                    transferred over to Liberec. 
+                    Now I am studying Informatics at FM TUL, with a specialization into intelligent systems.
+                </p>
+            </div>
+            <div class="split-image">
+                <img src="media/WCL_ds_mage.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!--#################################################################################################-->
     <section id="modelmaking" class="section fade-in">
-        <h2>Modelmaking</h2>
-        <p>
-            I've been making plastic models since 2012. I started with WW2 airplanes,
-            then moved to ships and miniatures. Recently I focus on painting and WoW replicas.
-        </p>
-        <h2>Modelmaking Achievements</h2>
-        <p>
-            I attended quite a bit of modelmaking competitions.
-            Mostly Novopacký Šutrák - an international modelmaking competition in Nová Paka
-            and Hradecký Lev - a national modelmaking competition based in Hradec Králové.
-        </p>
+        <div class="split-layout">
+            <div class="split-text">
+                <h2>Modelmaking</h2>
+                <p>
+                    I've been making plastic models since 2012. I started with WW2 airplanes,
+                    then moved to ships and miniatures. Recently I focus on painting DnD and minis 
+                    and World of Warcraft weapon replicas.
+                </p>
+                <h2>Modelmaking Achievements</h2>
+                <p>
+                    I attended quite a bit of modelmaking competitions.
+                    Mostly Novopacký Šutrák - an international modelmaking competition in Nová Paka
+                    and Hradecký Lev - a national modelmaking competition based in Hradec Králové.
+                </p>
+            </div>
+            <div class="split-image">
+                <img src="media/lod.jpg" alt="">
+            </div>
+        </div>
     </section>
 
     <section id="games" class="section fade-in">
-        <h2>Computer Games</h2>
-        <p>
-            I enjoy playing games, especially ones where I can improve skills or explore worlds.
-            World of Warcraft has been a big part of my gaming experience. 
-            There were 3 main games, that I played in my life: Counter-Strike, Hearthstone and World of Warcraft.
-        </p>
+        <div class="split-layout reverse">
+            <div class="split-text">
+                <h2>Computer Games</h2>
+                <p>
+                    One of my major hobbies is playing computer games. 
+                    I love multiplayer games, and I have made countless life-long friends
+                    that way. In my life I played Counter-Strike since i was 7 years old.
+                    Later on I pivoted to Blizzard games, and started playing WoW and Hearthstone.
+                    Today I no longer play Hearthstone, and instead occasionally play Magic: the Gathering 
+                    with friends.
+                </p>
+                <h2>
+                    Achievements
+                </h2>
+                <p>
+                    In Counter-Strike I reached top 0.5% of players worldwide. 
+                    In World of Warcraft I reached rank 19 World as a Fire Mage in Dragon Soul
+                    pre nerf. I also reached rank 31 in HoF as a Destruction Warlock.
+                </p>
+            </div>
+            <div class="split-image">
+                <img src="media/WCL_ds_mage.png" alt="">
+            </div>
+        </div>
     </section>
 
     <section id="music" class="section fade-in">
-        <h2>Music</h2>
-        <p>
-            I discovered music during Covid and got into techno and trance.
-            Since then, music has become an important part of my daily life.
-            These days I mostly lsiten to Techno / Trance, but I am open to most genres.
-        </p>
+        <div class="split-layout">
+            <div class="split-text">
+                <h2>Music</h2>
+                <p>
+                    I discovered music during Covid and got into techno.
+                    Since then, music has become an important part of my daily life.
+                    These days I mostly listen to Techno / Trance, but I am open to most genres really.
+                </p>
+                <h2>
+                    My favourite music:
+                </h2>
+                    <ul class="music-list">
+                        <li><a class="music-link" href="https://youtu.be/4dBZ5_jPqX0?si=EXHxeTe6hlcgVX2C">Gaia - Tuvan</a></li>
+                        <li><a class="music-link" href="https://youtu.be/wT0jm-7iWz8?si=J_WPZmdKnPlXShWN">Phynn - Lucid</a></li>
+                        <li><a class="music-link" href="https://youtu.be/Bm88TgIdOJ8?si=RRqMj7zVJn8Ra74j">Supermode - Tell Me Why</a></li>
+                        <li><a class="music-link" href="https://youtu.be/JxTaSjPMLdc?si=hgS3TPGuvCNpk_0s">Paul Van Dyk & Cirez D - Glow & Nothing But You</a></li>
+                    </ul>
+            </div>
+            <div class="split-image">
+                <img src="media/asot2.webp" alt="">
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="section fade-in">
         <h2>Contact</h2>
         <p>Email: jan.kerslager@tul.cz</p>
+        <p>TEL: +420 776 045 446</p>
+        <p>Address: Koleje Harcov Budova B, room 716</p>
     </section>
 
     <footer>
